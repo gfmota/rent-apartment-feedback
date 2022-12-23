@@ -6,11 +6,6 @@ export interface FeedbackAction {
   data: FeedbackState;
 }
 
-export const setNameAction = (name: string) => ({
-  type: FeedbackActions.SET_NAME,
-  data: { name }
-});
-
 export const setRateAction = (rate: number) => ({
   type: FeedbackActions.SET_RATE,
   data: { rate }
