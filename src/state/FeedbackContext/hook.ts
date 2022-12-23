@@ -1,9 +1,5 @@
 import { useContext } from 'react';
-import {
-  setCommentAction,
-  setRateAction,
-  setStepAction
-} from './actions';
+import { setCommentAction, setRateAction, setStepAction } from './actions';
 import { FeedbackContext } from './FeedbackContext';
 
 export const useFeedbackContext = () => {

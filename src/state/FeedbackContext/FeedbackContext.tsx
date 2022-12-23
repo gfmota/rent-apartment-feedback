@@ -3,7 +3,7 @@ import { FeedbackAction } from './actions';
 import { feedbackReducer, FeedbackState } from './reducer';
 
 const initialState: FeedbackState = {
-  step: 0
+  step: 1
 };
 
 export const FeedbackContext = React.createContext<{
