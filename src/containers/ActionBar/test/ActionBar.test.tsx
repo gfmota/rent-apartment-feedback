@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { useFeedbackSteps } from '../../../hooks';
 import { ActionBar } from '../ActionBar';
 
-jest.mock('../../../hooks')
+jest.mock('../../../hooks');
 
 describe('ActionBar', () => {
   it('should render correctly', () => {

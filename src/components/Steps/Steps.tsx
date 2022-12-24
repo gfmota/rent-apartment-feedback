@@ -6,11 +6,12 @@ export const Steps = () => {
   const { currentStep } = useFeedbackSteps();
 
   return (
-    <StyledStepsWrapper data-testid='Steps'>
+    <StyledStepsWrapper data-testid="Steps">
       {[...Array(STEPS_LENGTH)].map((value, ind) => (
         <StyledStep
           selected={ind + 1 === currentStep}
           key={ind}
+          data-testid="step"
         />
       ))}
     </StyledStepsWrapper>
