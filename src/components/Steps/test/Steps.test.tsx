@@ -16,7 +16,6 @@ describe('Steps', () => {
     expect(screen.getAllByTestId('step')).toHaveLength(STEPS_LENGTH);
   });
 
-
   it('should render current step selected', () => {
     render(<Steps />);
     const steps = screen.getAllByTestId('step');
