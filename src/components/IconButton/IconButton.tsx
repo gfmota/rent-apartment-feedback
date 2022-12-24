@@ -3,7 +3,7 @@ import { StyledButton } from './styled';
 
 interface IconButtonProps {
   IconComponent: React.FC<{
-    alt: string;
+    title: string;
     size?: number;
   }>;
   alt: string;
@@ -17,8 +17,8 @@ export const IconButton: React.FC<IconButtonProps> = ({
 }) => (
   <StyledButton onClick={onClick}>
     <IconComponent
-      alt={alt}
-      size={32}
+      title={alt}
+      size={36}
     />
   </StyledButton>
 );

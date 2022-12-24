@@ -24,6 +24,7 @@ export const useFeedbackSteps = () => {
   return {
     currentStep: step,
     onContinue,
-    onBack
+    onBack,
+    isBackButtonEnabled: step !== 1
   };
 };
