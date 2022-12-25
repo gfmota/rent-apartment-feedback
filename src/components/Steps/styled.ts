@@ -7,8 +7,8 @@ interface StyledStepProps {
 export const StyledStep = styled.div<StyledStepProps>`
   border-radius: 100%;
   border: solid 3px white;
-  height: ${({ selected }) => (selected ? '1.7em' : '1em')};
-  width: ${({ selected }) => (selected ? '1.7em' : '1em')};
+  height: ${({ selected }) => (selected ? '1em' : '.5em')};
+  width: ${({ selected }) => (selected ? '1em' : '.5em')};
   background-color: ${({ selected }) => (selected ? 'white' : 'black')};
   transition: all 1s;
   margin: 0 0.2em;
