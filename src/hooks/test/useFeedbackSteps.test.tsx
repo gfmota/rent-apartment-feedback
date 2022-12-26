@@ -16,7 +16,7 @@ const buildWrapper =
   (state: { step: number } = defaultState) =>
   ({ children }: React.PropsWithChildren) =>
     (
-      <FeedbackContext.Provider value={{ state: state, dispatch }}>
+      <FeedbackContext.Provider value={{ state, dispatch }}>
         {children}
       </FeedbackContext.Provider>
     );

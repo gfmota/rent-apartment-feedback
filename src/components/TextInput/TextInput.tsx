@@ -7,7 +7,7 @@ export const TextInput = () => {
 
   return (
     <StyledTextInput
-      rows={3}
+      rows={5}
       onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
         onCommentChange(e.target.value)
       }

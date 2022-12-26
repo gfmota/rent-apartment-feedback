@@ -5,7 +5,8 @@ export const StyledTextInput = styled.textarea`
   color: inherit;
 
   padding: 0.5em;
-  width: calc(100% - 1em - 6px);
+  margin: 1em;
+  width: calc(100% - 3em - 6px);
 
   border: solid 2px white;
   font-size: inherit;
