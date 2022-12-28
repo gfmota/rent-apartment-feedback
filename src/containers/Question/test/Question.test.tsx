@@ -3,11 +3,14 @@ import { Question } from '../Question';
 import { messages } from '../steps/messages';
 import { FeedbackState } from '../../../state/FeedbackContext/reducer';
 import { FeedbackContext } from '../../../state/FeedbackContext';
+import { BrowserRouter } from 'react-router-dom';
 
 const renderQuestion = (state: FeedbackState) =>
   render(
     <FeedbackContext.Provider value={{ state, dispatch: jest.fn() }}>
-      <Question />
+      <BrowserRouter>
+        <Question />
+      </BrowserRouter>
     </FeedbackContext.Provider>
   );
 

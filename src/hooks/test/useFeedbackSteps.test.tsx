@@ -5,6 +5,11 @@ import { STEPS_LENGTH, useFeedbackSteps } from '../useFeedbackSteps';
 import { FeedbackContext } from '../../state/FeedbackContext';
 import { setStepAction } from '../../state/FeedbackContext/actions';
 
+const mockNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockNavigate
+}));
 jest.mock('../../state/FeedbackContext/actions');
 
 const defaultState = {
@@ -64,6 +69,15 @@ describe('useFeedbackSteps', () => {
     result.current.onBack();
 
     expect(setStepAction).not.toBeCalled();
+  });
+
+  it('should redirect onContinue if last step', () => {
+    const { result } = renderHook(useFeedbackSteps, {
+      wrapper: buildWrapper({ step: STEPS_LENGTH })
+    });
+    result.current.onContinue();
+
+    expect(mockNavigate).toBeCalledWith('/checkout');
   });
 
   it('back button should be disabled if first step', () => {

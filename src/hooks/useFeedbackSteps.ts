@@ -1,14 +1,17 @@
 import { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useFeedbackContext } from '../state/FeedbackContext';
 
 export const STEPS_LENGTH = 3;
 
 export const useFeedbackSteps = () => {
   const { step, setStep } = useFeedbackContext();
+  const navigate = useNavigate();
 
   const handleSubmit = useCallback(() => {
+    navigate('/checkout');
     return null;
-  }, []);
+  }, [navigate]);
 
   const onContinue = useCallback(() => {
     if (!step) return;
