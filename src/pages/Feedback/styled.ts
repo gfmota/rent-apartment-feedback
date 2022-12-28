@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledFeedbackWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding-top: calc(${() => (window.innerWidth * 260) / 375}px + 2em);
 
-  height: 100vh;
+  height: ${() => window.innerHeight}px;
 `;

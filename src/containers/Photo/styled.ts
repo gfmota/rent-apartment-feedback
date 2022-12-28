@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const StyledPhotoWrapper = styled.div`
   width: 100vw;
-  position: relative;
+  position: fixed;
+  top: 0;
 `;
 
 export const StyledImage = styled.img`
