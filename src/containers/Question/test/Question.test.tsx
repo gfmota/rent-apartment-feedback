@@ -19,6 +19,7 @@ describe('Question', () => {
     renderQuestion({ step: 1 });
 
     expect(screen.getByText(messages.home)).toBeInTheDocument();
+    expect(screen.getByTitle(messages.iconAlt)).toBeInTheDocument();
   });
 
   it('should render Rate for step 2', () => {

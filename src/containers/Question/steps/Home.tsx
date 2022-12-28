@@ -1,11 +1,14 @@
 import React from 'react';
-import { BsEmojiSmile } from 'react-icons/bs';
+import { TbBeach } from 'react-icons/tb';
 import { messages } from './messages';
 import { StyledStepQuestionWrapper, StyledText } from './styled';
 
 export const Home = () => (
   <StyledStepQuestionWrapper>
-    <BsEmojiSmile size={64} />
+    <TbBeach
+      size={64}
+      title={messages.iconAlt}
+    />
     <StyledText>{messages.home}</StyledText>
   </StyledStepQuestionWrapper>
 );

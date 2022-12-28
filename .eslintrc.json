@@ -31,5 +31,5 @@
       "typescript": {}
     }
   },
-  "ignorePatterns": ["*.css", "*.json", "*.jpg"]
+  "ignorePatterns": ["*.css", "*.json", "*.jpg", "*.png", "*.ico", "*.html"]
 }
