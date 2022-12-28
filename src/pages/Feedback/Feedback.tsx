@@ -1,4 +1,5 @@
 import React from 'react';
+import { withLazyLoad } from '../../components/LazyLoad';
 import { ActionBar } from '../../containers/ActionBar';
 import { Photo } from '../../containers/Photo';
 import { Question } from '../../containers/Question';
@@ -11,3 +12,5 @@ export const Feedback = () => (
     <ActionBar />
   </StyledFeedbackWrapper>
 );
+
+export const LazyLoadFeedback = withLazyLoad(Feedback);

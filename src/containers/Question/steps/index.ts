@@ -1,3 +1,3 @@
-export { Home } from './Home';
-export { Rate } from './Rate';
-export { Comment } from './Comment';
+export { LazyLoadHome as Home } from './Home';
+export { LazyLoadRate as Rate } from './Rate';
+export { LazyLoadComment as Comment } from './Comment';

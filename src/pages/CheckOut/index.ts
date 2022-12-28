@@ -1,1 +1,1 @@
-export { CheckOut } from './CheckOut';
+export { LazyLoadCheckout as CheckOut } from './CheckOut';

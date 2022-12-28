@@ -1,1 +1,1 @@
-export { Feedback } from './Feedback';
+export { LazyLoadFeedback as Feedback } from './Feedback';
