@@ -1,15 +1,19 @@
 import styled from 'styled-components';
+import { StyledDefaultProps } from '../../styles';
 
-interface StyledStepProps {
+interface StyledStepProps extends StyledDefaultProps {
   selected: boolean;
 }
 
 export const StyledStep = styled.div<StyledStepProps>`
   border-radius: 100%;
-  border: solid 3px white;
+  border: solid 3px
+    ${({ selected, palette }) =>
+      selected ? palette.primary.main : palette.primary.light};
   height: ${({ selected }) => (selected ? '1em' : '.5em')};
   width: ${({ selected }) => (selected ? '1em' : '.5em')};
-  background-color: ${({ selected }) => (selected ? 'white' : 'black')};
+  background-color: ${({ selected, palette }) =>
+    selected ? palette.primary.main : 'inhrit'};
   transition: all 1s;
   margin: 0 0.2em;
 `;

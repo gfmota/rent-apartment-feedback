@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStyle } from '../../styles';
 import { StyledButton } from './styled';
 
 interface IconButtonProps {
@@ -14,11 +15,17 @@ export const IconButton: React.FC<IconButtonProps> = ({
   IconComponent,
   alt,
   onClick
-}) => (
-  <StyledButton onClick={onClick}>
-    <IconComponent
-      title={alt}
-      size={36}
-    />
-  </StyledButton>
-);
+}) => {
+  const { palette } = useStyle();
+  return (
+    <StyledButton
+      onClick={onClick}
+      palette={palette}
+    >
+      <IconComponent
+        title={alt}
+        size={36}
+      />
+    </StyledButton>
+  );
+};

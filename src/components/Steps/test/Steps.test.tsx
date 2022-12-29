@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { Steps } from '../Steps';
 import { useFeedbackSteps } from '../../../hooks';
 import { STEPS_LENGTH } from '../../../hooks/useFeedbackSteps';
+import { PALETTE } from '../../../styles/constants';
 
 jest.mock('../../../hooks');
 
@@ -20,8 +21,8 @@ describe('Steps', () => {
     render(<Steps />);
     const steps = screen.getAllByTestId('step');
 
-    expect(steps[0]).toHaveStyle('background-color: black');
-    expect(steps[1]).toHaveStyle('background-color: white');
-    expect(steps[2]).toHaveStyle('background-color: black');
+    expect(steps[1]).toHaveStyle(
+      `background-color: ${PALETTE.light.primary.main}`
+    );
   });
 });

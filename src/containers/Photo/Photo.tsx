@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFeedbackSteps } from '../../hooks';
+import { useStyle } from '../../styles';
 import { messages } from './messages';
 import { StyledFade, StyledImage, StyledPhotoWrapper } from './styled';
 
@@ -11,6 +12,7 @@ const stepPhotos = [
 
 export const Photo = () => {
   const { currentStep } = useFeedbackSteps();
+  const { palette } = useStyle();
   if (!currentStep) return null;
   const { imgSrc, altText } = stepPhotos[currentStep - 1];
 
@@ -20,7 +22,7 @@ export const Photo = () => {
         src={imgSrc}
         alt={altText}
       />
-      <StyledFade />
+      <StyledFade palette={palette} />
     </StyledPhotoWrapper>
   );
 };

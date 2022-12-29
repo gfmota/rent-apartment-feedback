@@ -5,7 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { FeedbackProvider } from './state/FeedbackContext';
-import './index.css';
+import './styles/index.css';
+import { StyleProvider } from './styles';
+import { DefaultStyle } from './components/DefaultStyle';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,7 +16,11 @@ root.render(
   <React.StrictMode>
     <FeedbackProvider>
       <BrowserRouter>
-        <App />
+        <StyleProvider>
+          <DefaultStyle>
+            <App />
+          </DefaultStyle>
+        </StyleProvider>
       </BrowserRouter>
     </FeedbackProvider>
   </React.StrictMode>
