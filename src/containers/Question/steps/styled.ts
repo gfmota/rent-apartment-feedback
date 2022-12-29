@@ -10,4 +10,5 @@ export const StyledStepQuestionWrapper = styled.div`
 
 export const StyledText = styled.div`
   margin: 0.5em 1em;
+  text-align: center;
 `;
