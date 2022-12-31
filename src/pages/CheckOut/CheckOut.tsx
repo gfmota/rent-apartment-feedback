@@ -1,6 +1,7 @@
 import React from 'react';
 import { BsEmojiSmile } from 'react-icons/bs';
 import { withLazyLoad } from '../../components/LazyLoad';
+import { StyledText } from '../../containers/Question/steps/styled';
 import { messages } from './messages';
 import { StyledCheckOutWrapper } from './styled';
 
@@ -10,7 +11,7 @@ export const CheckOut = () => (
       size={64}
       title={messages.smileAlt}
     />
-    <div>{messages.thankYou}</div>
+    <StyledText>{messages.thankYou}</StyledText>
   </StyledCheckOutWrapper>
 );
 
