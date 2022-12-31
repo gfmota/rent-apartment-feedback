@@ -5,21 +5,21 @@ import { messages } from './messages';
 import { StyledFade, StyledImage, StyledPhotoWrapper } from './styled';
 
 const stepPhotos = [
-  { imgSrc: './step1photo.jpg', altText: messages.beachAlt },
-  { imgSrc: './step2photo.jpg', altText: messages.buildingAlt },
-  { imgSrc: './step3photo.jpg', altText: messages.apartmentAlt }
+  { imgId: process.env.REACT_APP_IMAGE_1_ID, altText: messages.beachAlt },
+  { imgId: process.env.REACT_APP_IMAGE_2_ID, altText: messages.buildingAlt },
+  { imgId: process.env.REACT_APP_IMAGE_3_ID, altText: messages.apartmentAlt }
 ];
 
 export const Photo = () => {
   const { currentStep } = useFeedbackSteps();
   const { palette } = useStyle();
   if (!currentStep) return null;
-  const { imgSrc, altText } = stepPhotos[currentStep - 1];
+  const { imgId, altText } = stepPhotos[currentStep - 1];
 
   return (
     <StyledPhotoWrapper>
       <StyledImage
-        src={imgSrc}
+        src={`https://drive.google.com/uc?export=view&id=${imgId}`}
         alt={altText}
       />
       <StyledFade palette={palette} />
