@@ -15,21 +15,11 @@ const renderPhoto = (state: FeedbackState) =>
   );
 
 describe('Photo', () => {
-  it('should render beach image on step 1', () => {
+  it('should render correctly', () => {
     renderPhoto({ step: 1 });
 
     expect(screen.getByAltText(messages.beachAlt)).toBeInTheDocument();
-  });
-
-  it('should render building image on step 2', () => {
-    renderPhoto({ step: 2 });
-
     expect(screen.getByAltText(messages.buildingAlt)).toBeInTheDocument();
-  });
-
-  it('should render apartment image on step 3', () => {
-    renderPhoto({ step: 3 });
-
     expect(screen.getByAltText(messages.apartmentAlt)).toBeInTheDocument();
   });
 });
