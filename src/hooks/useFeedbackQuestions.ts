@@ -25,7 +25,8 @@ export const useFeedbackQuestions = () => {
           method: 'GET',
           mode: 'cors',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Referrer-Policy': 'no-referrer'
           }
         }
       );
