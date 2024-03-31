@@ -15,15 +15,21 @@ export const useFeedbackQuestions = () => {
   );
 
   const sendAnswers = useCallback(() => {
-    const postData = async () =>
-      fetch(process.env.REACT_APP_FEEDBACK_API || '', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ date: new Date().toDateString(), comment, rate })
-      });
-    postData();
+    const message = `
+      <b>🏢 TESTE</b> %0A ⭐ Nota: ${rate} %0A 💬 Comentário: ${comment}
+    `;
+    const sendMessage = async () =>
+      fetch(
+        `https://api.telegram.org/bot${process.env.REACT_APP_BOT_ID}/sendMessage?chat_id=${process.env.REACT_APP_CHAT_ID}&text=${message}&parse_mode=html`,
+        {
+          method: 'GET',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+    sendMessage();
   }, [comment, rate]);
 
   return {
